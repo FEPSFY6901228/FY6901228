@@ -45,7 +45,7 @@
       }
 
       /* Chart styling */
-      #chart_div, #scatter_div {
+      #chart_div, #scatter_div, #piechart_div {
         width: 600px;
         height: 400px;
       }
@@ -55,7 +55,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script type="text/javascript">
-      // Load Google Charts for Bar Chart and Scatter Chart
+      // Load Google Charts for Bar Chart, Scatter Chart, and Pie Chart
       google.charts.load('current', {packages: ['corechart']});
 
       // Bar Chart callback
@@ -96,6 +96,27 @@
         };
 
         var chart = new google.visualization.ScatterChart(document.getElementById('scatter_div'));
+        chart.draw(data, options);
+      }
+
+      // Pie Chart callback
+      google.charts.setOnLoadCallback(drawPieChart);
+      function drawPieChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Bridge Component', 'Repair Cost (£ millions)'],
+          ['Deck', 0.7],
+          ['Girders', 1.2],
+          ['Bearings', 0.9],
+          ['Expansion Joints', 0.5],
+          ['Pavement', 0.3]
+        ]);
+
+        var options = {
+          title: 'Bridge Repair Costs by Component',
+          pieHole: 0.4
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_div'));
         chart.draw(data, options);
       }
 
@@ -202,6 +223,10 @@
     <!-- Scatter Chart Display -->
     <h3>Age vs. Salary Scatter Chart</h3>
     <div id="scatter_div"></div>
+
+    <!-- Pie Chart Display -->
+    <h3>Bridge Repair Costs by Component</h3>
+    <div id="piechart_div"></div>
 
   </body>
 </html>
