@@ -36,10 +36,84 @@
       .mySlides {
         display: none;
       }
+      
+      /* Button styling */
+      #colorButton {
+        padding: 10px 20px;
+        margin: 20px 0;
+        cursor: pointer;
+      }
+
+      /* Chart styling */
+      #chart_div, #scatter_div {
+        width: 600px;
+        height: 400px;
+      }
     </style>
+
+    <!-- Google Charts API -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      // Load Google Charts for Bar Chart and Scatter Chart
+      google.charts.load('current', {packages: ['corechart']});
+
+      // Bar Chart callback
+      google.charts.setOnLoadCallback(drawBarChart);
+      function drawBarChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['City', 'Population'],
+          ['London', 9648000],
+          ['Birmingham', 1153900],
+          ['Edinburgh', 554000]
+        ]);
+
+        var options = {
+          title: 'City Populations in 2023',
+          hAxis: {title: 'City'},
+          vAxis: {title: 'Population'},
+          colors: ['blue']
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+
+      // Scatter Chart callback
+      google.charts.setOnLoadCallback(drawScatterChart);
+      function drawScatterChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Age');
+        data.addColumn('number', 'Salary');
+        data.addRows([
+          [25, 40000], [30, 50000], [35, 60000], [40, 75000], [45, 80000], [50, 90000]
+        ]);
+
+        var options = {
+          title: 'Age vs. Salary',
+          hAxis: {title: 'Age'},
+          vAxis: {title: 'Salary'}
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('scatter_div'));
+        chart.draw(data, options);
+      }
+
+      // Change button color on click
+      function changeColor() {
+        var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        document.getElementById("colorButton").style.backgroundColor = randomColor;
+      }
+
+      // Display current date and time
+      function showDateTime() {
+        var d = new Date();
+        document.getElementById("dateTime").innerHTML = d;
+      }
+    </script>
   </head>
 
-  <body style="background-color:#FFFFFF; margin-left:50px;">
+  <body style="background-color:#FFFFFF; margin-left:50px;" onload="showDateTime()">
     <!-- Image Banner -->
     <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
 
@@ -113,6 +187,21 @@
         <td>5 years</td>
       </tr>
     </table>
-    
+
+    <!-- Date and Time Display -->
+    <h3>Current Date and Time</h3>
+    <p id="dateTime"></p>
+
+    <!-- Button to Change Color -->
+    <button id="colorButton" onclick="changeColor()">Click me to change color</button>
+
+    <!-- Bar Chart Display -->
+    <h3>City Populations in 2023</h3>
+    <div id="chart_div"></div>
+
+    <!-- Scatter Chart Display -->
+    <h3>Age vs. Salary Scatter Chart</h3>
+    <div id="scatter_div"></div>
+
   </body>
 </html>
