@@ -1,226 +1,154 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Conference Paper: Is the Decentralisation of Web 3.0 Achievable in its Current State?</title>
-    <!-- Meta tag for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- External CSS Link -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <!-- Internal CSS Styling -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second-Year Sci-Fi Website</title>
     <style>
-      /* Table styling */
-      table {
-        font-family: Arial, sans-serif;
-        border-collapse: collapse;
-        width: 30%;
-      }
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: linear-gradient(145deg, #2c003f, #3e0063);
+            color: #fff;
+        }
 
-      td, th {
-        border: 1px solid #deedff;
-        text-align: left;
-        padding: 8px;
-      }
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #4a0072;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
 
-      tr:nth-child(even) {
-        background-color: #deedff;
-      }
+        .sidebar a {
+            text-decoration: none;
+            color: #e6ccff;
+            padding: 15px;
+            margin: 5px;
+            text-align: center;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
 
-      /* Paragraph class styling */
-      p.ex1 {
-        margin-left: 250px;
-      }
+        .sidebar a:hover {
+            background: #7b1fa2;
+            color: #fff;
+        }
 
-      /* Slideshow styling */
-      .mySlides {
-        display: none;
-      }
-      
-      /* Button styling */
-      #colorButton {
-        padding: 10px 20px;
-        margin: 20px 0;
-        cursor: pointer;
-      }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
 
-      /* Chart styling */
-      #chart_div, #scatter_div, #piechart_div {
-        width: 600px;
-        height: 400px;
-      }
+        /* Sci-fi heading styling */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: #d1c4e9;
+            text-shadow: 0 0 10px #7b1fa2;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #b39ddb;
+        }
+
+        /* Section styling */
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background: rgba(75, 0, 130, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        a:focus {
+            outline: 2px solid #fff;
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background: #4a0072;
+            border-top: 2px solid #7b1fa2;
+            color: #e6ccff;
+        }
     </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#section1">Introduction</a>
+        <a href="#section2">About Me</a>
+        <a href="#section3">Projects</a>
+        <a href="#section4">Skills</a>
+        <a href="#section5">Achievements</a>
+        <a href="#section6">Goals</a>
+        <a href="#section7">Contact</a>
+    </div>
 
-    <!-- Google Charts API -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Content -->
+    <div class="content">
+        <h1>Conference Article: Is the Decentralisation of Web 3.0 Achievable in its Current State?</h1>
 
-    <script type="text/javascript">
-      // Load Google Charts for Bar Chart, Scatter Chart, and Pie Chart
-      google.charts.load('current', {packages: ['corechart']});
+        <section id="section1">
+            <h2>Abstract</h2>
+            <p>Web 3.0 was developed as a decentralised web network and guarantees the decentralisation of user data and the clearing of power structures inherent in Web 2.0 (Alabdulwahhab, 2018). This article evaluates the degree of realisable decentralisation within the blockchain-based Web 3.0 platform, as it explores its usability, regulated token operations, congestion, and environmental and compliance-related issues (Reiff, 2024; Earthjustice, 2022). There is promise of a user-friendly internet, but technical and operational problems still need to improve the full adoption of Web 3.0. The article delineates the advancement and the restrictions in the actualisation of decentralisation, thus, concluding that the substantial gains in technology, regulation, and users' adoption of the technology are prerequisites for the Web 3.0 vision to come to fruition, and as a result, technology, law, and user participation must impute.</p>
+        </section>
 
-      // Bar Chart callback
-      google.charts.setOnLoadCallback(drawBarChart);
-      function drawBarChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['City', 'Population'],
-          ['London', 9648000],
-          ['Birmingham', 1153900],
-          ['Edinburgh', 554000]
-        ]);
+        <section id="section2">
+            <h2>Introduction</h2>
+            <p>The internet’s evolution has drastically changed how humans interact with each other and the world around us. With this, society has shifted, becoming more data-driven as our data is ever more valuable and out of our control (Swan, 2015). Web 3.0 now introduces decentralisation as its defining feature. Coined by Gavin Wood in 2014, Web 3.0 envisions a “trustless” Internet where users control their data without central oversight (Alabdulwahhab, 2018). However, in a world dominated by major corporations such as Meta and Google, this article questions the feasibility of Web 3.0’s decentralisation in its current form (Kim, 2019). Through an exploration of blockchain technology, token economics, and systemic challenges, the article aims to determine if Web 3.0 can indeed achieve decentralisation or if it remains an idealistic vision (Swan, 2015).</p>
+        </section>
 
-        var options = {
-          title: 'City Populations in 2023',
-          hAxis: {title: 'City'},
-          vAxis: {title: 'Population'},
-          colors: ['blue']
-        };
+        <section id="section3">
+            <h2>The Evolution of the Web</h2>
+            <p>Understanding Web 3.0’s decentralisation aims requires examining previous web incarnations and their effects on data control.</p>
+            <h3>Web 1.0</h3>
+            <p>Web 1.0 was the first stage of the Internet. It was mainly “read-only,” featuring static pages with limited user interaction. Built on basic technologies like HTML and HTTP, Web 1.0 established core protocols for data retrieval and information sharing without centralised data management (Geroni, 2021).</p>
+            <h3>Web 2.0</h3>
+            <p>Web 2.0 transformed the internet by enabling user interaction, content creation, and social media growth. Platforms like Facebook and YouTube allow companies to collect and monetise large amounts of user data (Reiff, 2024). Companies such as Meta and Amazon now control much of the infrastructure behind Web 2.0, making today’s internet highly centralised (Swan, 2015).</p>
+        </section>
+      
 
-        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
+        <section id="section4">
+            <h2>The Promise of Web 3.0 Decentralisation</h2>
+            <p>By utilising blockchain technology and decentralised protocols, Web 3.0 seeks to remove centralised power structures that are used in Web 2.0. The main goal is to allow users to transact directly without middlemen, returning control of data to the users (Alabdulwahhab, 2018). Essential Web 3.0 innovations such as peer-to-peer transactions and decentralised applications (DApps) aim to replace central servers with a network of computers managed by the users themselves (Marlinspike, 2022).</p>
+        </section>
 
-      // Scatter Chart callback
-      google.charts.setOnLoadCallback(drawScatterChart);
-      function drawScatterChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('number', 'Age');
-        data.addColumn('number', 'Salary');
-        data.addRows([
-          [25, 40000], [30, 50000], [35, 60000], [40, 75000], [45, 80000], [50, 90000]
-        ]);
+        <section id="section5">
+            <h2>Achievements</h2>
+            <p>Recipient of the Dean's Merit Award for outstanding academic performance in Year 1.</p>
+        </section>
 
-        var options = {
-          title: 'Age vs. Salary',
-          hAxis: {title: 'Age'},
-          vAxis: {title: 'Salary'}
-        };
+        <section id="section6">
+            <h2>Goals</h2>
+            <p>My primary goal is to develop immersive experiences for users with augmented and virtual reality.</p>
+        </section>
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('scatter_div'));
-        chart.draw(data, options);
-      }
+        <section id="section7">
+            <h2>Contact</h2>
+            <p>Alabdulwahhab, F., 2018. Web 3.0: The Decentralized Web Blockchain Networks and Protocol Innovation: <a href="https://www.researchgate.net/publication/327193845_Web_30_The_Decentralized_Web_Blockchain_networks_and_Protocol_Innovation">https://www.researchgate.net/publication/327193845_Web_30_The_Decentralized_Web_Blockchain_networks_and_Protocol_Innovation</a>.</p>
+            <p>Feel free to reach me at: <a href="mailto:student@example.com">student@example.com</a>.</p>
+            <p>Feel free to reach me at: <a href="mailto:student@example.com">student@example.com</a>.</p>
+            
+          
+          
+        </section>
+    </div>
 
-      // Pie Chart callback
-      google.charts.setOnLoadCallback(drawPieChart);
-      function drawPieChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Bridge Component', 'Repair Cost (£ millions)'],
-          ['Deck', 0.7],
-          ['Girders', 1.2],
-          ['Bearings', 0.9],
-          ['Expansion Joints', 0.5],
-          ['Pavement', 0.3]
-        ]);
-
-        var options = {
-          title: 'Bridge Repair Costs by Component',
-          pieHole: 0.4
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_div'));
-        chart.draw(data, options);
-      }
-
-      // Change button color on click
-      function changeColor() {
-        var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-        document.getElementById("colorButton").style.backgroundColor = randomColor;
-      }
-
-      // Display current date and time
-      function showDateTime() {
-        var d = new Date();
-        document.getElementById("dateTime").innerHTML = d;
-      }
-    </script>
-  </head>
-
-  <body style="background-color:#FFFFFF; margin-left:50px;" onload="showDateTime()">
-    <!-- Image Banner -->
-    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
-
-    <!-- Title and Student URN -->
-    <h1><b>ENG0018 Computer Laboratory 2023/2024</b></h1>
-    <h2>Student URN: 6901228</h2>
-    <hr>
-
-    <!-- Article Title -->
-    <h2 style="font-family: Calibri;"><b>Conference Paper: Bridge Deck Repairs</b></h2>
-    <hr>
-
-    <!-- Table of Contents -->
-    <table>
-      <tr>
-        <th><h3>Table of Contents</h3></th>
-      </tr>
-      <tr>
-        <td><a href="#Abstract">Abstract</a></td>
-      </tr>
-      <tr>
-        <td><a href="#Introduction">Introduction</a></td>
-      </tr>
-      <tr>
-        <td><a href="#Essay">Essay</a></td>
-      </tr>
-    </table>
-
-    <!-- Abstract Section -->
-    <h3 id="Abstract">Abstract</h3>
-    <p class="ex1">
-      <pre>
-        The process of repairing bridge decks requires innovative solutions that balance the need for 
-        structural integrity and cost-effectiveness. This paper explores methods for bridge deck repair, 
-        presenting findings from multiple case studies.
-      </pre>
-    </p>
-
-    <!-- Introduction Section -->
-    <h3 id="Introduction">Introduction</h3>
-    <p class="ex1">
-      <pre>
-        Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learned by an 
-        intelligent machine through interaction with an oracle over a sequence of learning epochs.
-      </pre>
-    </p>
-
-    <!-- Essay Section -->
-    <h3 id="Essay">Essay: Is the Decentralisation of Web 3.0 Achievable in its Current State?</h3>
-    <p class="ex1">
-      <pre>
-        Is the Decentralisation of Web 3.0 Achievable in its Current State?
-
-        Abstract
-        Web 3.0 was developed as a decentralised web network and guarantees the decentralisation of user data 
-        and the clearing of power structures inherent in Web 2.0 (Alabdulwahhab, 2018). This article evaluates 
-        the degree of realisable decentralisation within the blockchain-based Web 3.0 platform, as it explores 
-        its usability, regulated token operations, congestion, and environmental and compliance-related issues 
-        (Reiff, 2024; Earthjustice, 2022). There is promise of a user-friendly internet, but technical and operational 
-        problems still need to improve the full adoption of Web 3.0. The article delineates the advancement and the 
-        restrictions in the actualisation of decentralisation, thus, concluding that the substantial gains in technology, 
-        regulation, and users' adoption of the technology are prerequisites for the Web 3.0 vision to come to fruition, 
-        and as a result, technology, law, and user participation must impute.
-
-        [Full essay content continues here exactly as provided by the user...]
-      </pre>
-    </p>
-
-    <!-- Other Content -->
-    <h3>Current Date and Time</h3>
-    <p id="dateTime"></p>
-
-    <!-- Button to Change Color -->
-    <button id="colorButton" onclick="changeColor()">Click me to change color</button>
-
-    <!-- Bar Chart Display -->
-    <h3>City Populations in 2023</h3>
-    <div id="chart_div"></div>
-
-    <!-- Scatter Chart Display -->
-    <h3>Age vs. Salary Scatter Chart</h3>
-    <div id="scatter_div"></div>
-
-    <!-- Pie Chart Display -->
-    <h3>Bridge Repair Costs by Component</h3>
-    <div id="piechart_div"></div>
-
-  </body>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Sci-Fi Web. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
