@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <body style="background-color:#FFFFFF; margin-left:50px;" onload="showDateTime()">
-    <!-- Image Banner -->
-    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
-
-    <!-- Title and Student URN -->
-    <h1><b>ENG0018 Computer Laboratory 2023/2024</b></h1>
-    <h2>Student URN: 6901228</h2>
-    <hr>
-          
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Second-Year Sci-Fi Website</title>
@@ -189,8 +180,8 @@
             }
 
             function displayTotalWordCount() {
-                const IntroductionCount = displayWordCount("Introduction_InText");
-                const AnalysisCount = displayWordCount("Analysis_InText");
+                const IntroductionCount = displayWordCount("#section2");
+                const AnalysisCount = displayWordCount("#section3", "#section4", "#section5", "#section6" + "#section7" + "#section8");
                 const totalWordCount = IntroductionCount + AnalysisCount;
 
                 document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
